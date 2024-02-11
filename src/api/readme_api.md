@@ -1,6 +1,6 @@
 1. Install the following:
 
-a) json-server package
+a) json-server package ( Optional )
 Run : yarn add json-server
 
 b) redux toolkit
