@@ -29,8 +29,23 @@ import {
 //   title: string;
 // }>;
 
+import {
+  useGetPostsQuery,
+  useUpdatePostMutation,
+  useDeletePostMutation,
+  useNewPostMutation,
+} from './api/api';
+import {ApiProvider} from '@reduxjs/toolkit/query/react';
+import {postsAPI} from './api/api';
+import Home from './api/Home';
+// import {Provider} from 'react-redux';
+
 function App() {
-  return <Text> HEllo </Text>;
+  return (
+    <ApiProvider api={postsAPI}>
+      <Home />
+    </ApiProvider>
+  );
 }
 
 const styles = StyleSheet.create({});
